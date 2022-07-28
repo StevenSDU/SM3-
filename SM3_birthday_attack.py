@@ -113,14 +113,6 @@ def SM3(message):
         V.append(CF(V,message,i))
     return V[n]
 
-def randomnum(n):
-    rn = []
-    while len(rn) < n:
-        i = random.randint(0, pow(2,64))
-        if i not in rn:
-            rn.append(i)
-    return rn
-
 def SM3_brithday_attack(n):
     cipher = []
     for i in range(pow(2,16)):
